@@ -1,21 +1,18 @@
-import { Inter } from 'next/font/google'
-import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Your App Name',
-  description: 'Your app description',
-}
+// app/layout.tsx
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        {/* You can add global meta tags or links to stylesheets here */}
+      </head>
+      <body>
+        {children}
+      </body>
     </html>
-  )
+  );
 }
