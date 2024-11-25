@@ -2,11 +2,11 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Header } from '../../components/header'
+import { Footer } from '../../components/footer'
+import { Button } from '../../components/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/card'
+import { Tabs as Tabs_1, TabsList, TabsTrigger, TabsContent } from '../../components/Tabs'
 import {
   Table,
   TableBody,
@@ -14,15 +14,15 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
-import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { ScrollArea } from "@/components/ui/scroll-area"
+} from '../../components/table'
+import { Badge } from '../../components/badge'
+import { Avatar, AvatarFallback, AvatarImage } from '../../components/avatar'
+import { ScrollArea } from '../../components/scroll-area'
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible"
+} from '../../components/collapsbile'
 import { ArrowRight, Download, MessageSquare, ChevronDown } from 'lucide-react'
 
 export default function CoachDashboard() {
@@ -72,7 +72,7 @@ export default function CoachDashboard() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow container mx-auto px-4 py-8">
-        <Tabs defaultValue="dashboard" className="space-y-6" onValueChange={(value) => setActiveTab(value)}>
+        <Tabs_1 defaultValue="dashboard" className="space-y-6" onValueChange={(value) => setActiveTab(value)}>
           <TabsList>
             <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
             <TabsTrigger value="bookings">Bookings</TabsTrigger>
@@ -323,7 +323,7 @@ export default function CoachDashboard() {
               </CardContent>
             </Card>
           </TabsContent>
-        </Tabs>
+        </Tabs_1>
       </main>
       <Footer />
     </div>
